@@ -1,0 +1,267 @@
+/*HEADER*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,200&display=swap');
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body {
+	font-family: 'Poppins', sans-serif;
+}
+#conteinerGrids {
+	display: grid;
+	grid-template-areas: 
+	"header"
+	"principal"
+	"sub_principal"
+	"footer"
+	;
+}
+
+
+.transicion:hover {
+	transform: translate(2px, 5px);
+	transition: all 0.5s;
+	color: green;
+}
+.transicion{
+	border-left: black solid 10px;
+	border-right: black solid 10px;
+}
+
+.logoo {
+	width: 20%;
+	padding: 0;
+
+}
+
+/* HOME ----------- */
+
+#principal {
+	grid-area: principal;
+	padding: 100px;
+	background-image: url(../imagenes/fondo_home.jpg) ;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #FEF9F8;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+@media all and (max-width: 980px){
+	#principal{
+		flex-wrap: wrap;
+	}
+}
+
+
+#sub_principal{
+	grid-area: sub_principal;
+	height: 8rem;
+
+}
+.principal__titulo{
+	padding-top: 80px;
+	padding-bottom: 30px;
+	padding-left: 20px;
+	font-weight:bold;
+	z-index: 10;
+
+}
+.principal__sub{
+	text-align: left;
+	padding-left: 20px;
+
+}
+.principal__footer{
+	padding-top: 5px;
+	z-index: 10;
+}
+
+
+/*FOOTER----------------*/
+
+#footer {
+	grid-area: footer;
+	background-color: grey;
+	background-size: cover;
+	height: 70px;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+#footer a img{
+	max-height: 20px;
+	max-width: 20px;
+}
+#footer span{
+	display: flex;
+}
+
+
+.footer_titulo {
+	font-weight:bold;
+}
+.footer_nav a{
+	text-decoration: none;
+	color: black;
+	border: inset 2px #DFDFDF;
+	padding: 10px;
+	margin: 10px;
+	margin-left: 50px;
+}
+.footer_nav a:hover {
+	color: green;
+	font-weight: bold;
+	transform: translate(2px, 5px);
+	transition: all 0.5s;
+}
+ 
+@media all and (max-width: 1215px){
+	.footer_nav{
+		display: none;
+	}
+}
+.dropp {
+		visibility: hidden;
+	}
+	@media all and (max-width: 1214px){
+		.dropp{
+			justify-items: right;
+			visibility: visible;
+		}
+	}
+.redes {
+	position: sticky;
+}
+
+
+/*@media all and (max-width: 1060px){
+	.dropp {
+		visibility: visible;
+	}*/
+
+/*equipo------------------------*/
+.principal__1 {
+	grid-area: principal_1;
+	padding: 80px;
+	text-align: center;
+	background-color: #BEBEBE;
+	padding-bottom: 70px;
+	padding-top: 70;
+
+}
+.principal__sub2{
+	position: absolute;
+	font-weight:bold;
+	border: dotted;
+	right: 10px;
+	top: 100px;
+}
+.personal h4{
+	margin: 10px;
+	padding: 10px;
+	text-decoration: underline;	
+	color: white;
+}
+
+.personal {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	background-image: url(../imagenes/fondo_equipo.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.cajaImagenes {
+	width: 40%;
+	height: 40%;
+
+}
+.cajaImagenes a img {
+	max-width: 100%;
+	margin: 10px;
+	border-radius: 8px;
+	height: 250px;
+	width: 70%;
+
+}
+#subtitulo2{
+	grid-area: principal_2;
+}
+#personal1{
+	grid-area: personal;
+}
+#personal_2{
+	grid-area: personal_2;
+}
+#conteinerGrid{
+	display: grid;
+	grid-template-areas: 
+	"principal_1" 
+	"personal"
+	"principal_2"
+	"personal_2"
+}
+@media all and (max-width: 720px){
+	.personal {
+			max-width: 100%;
+			width: 100%;
+			max-height: 100%;
+		flex-direction: column;
+		justify-content:center;
+		object-fit: contain;
+		align-items: center;
+	}
+}
+@media all and (min-width: 920px){
+	.cajaImagenes a img {
+		height: 400px;
+		}
+}
+/*eventos------------------------*/
+.fila {
+	display: inline-block;
+
+}
+.fila div {
+	text-align: center;
+	min-height: 100px;
+}
+.fila a {
+	text-decoration: none;
+	border: solid 3px orange;
+	margin-left: 100px;
+	position: relative;
+	bottom: 10px;
+	color: orange;
+}
+/*CLUB------------------------*/
+.club{
+	display: inline-block;
+	width: 45%;
+
+}
+.club img{
+	margin: 10px;
+	border-radius: 8px;
+	height: 250px;
+}
+/*Contacto------------------------*/
+.titulo {
+	text-align: left;
+	height: 0px;
+}
+/*Contacto------------------------*/
+.formulario {
+	margin: 30px;
+	text-align: center;
+}
+#boton {
+	font-weight: 10px;
+	color: blue;
+	font-size: 20px;
+
+
+}
